@@ -19,7 +19,7 @@ public class CwDB  {
     public void add(String word, String clue){
         Entry new_word= new Entry(word,clue);
         dict.push(new_word);
-            }
+    }
 
 
     public Entry get(String word){
@@ -40,8 +40,8 @@ public class CwDB  {
     public void remove(String word){
         for(int i=0;i<dict.size();i++){
             if(dict.get(i).getWord()==word){
-                 dict.remove(dict.get(i));
-                 dict.remove(dict.get(i+1));
+                dict.remove(dict.get(i));
+                dict.remove(dict.get(i+1));
             }
         }
     }
@@ -49,11 +49,11 @@ public class CwDB  {
     public void saveDB(String filename){
         try {
             PrintWriter out = new PrintWriter(filename);
-           for( int i=0;i<dict.size();i++){
-               out.write(dict.get(i).getWord());
-               out.write("\n");
-               out.write(dict.get(i).getClue());
-               out.write("\n");
+            for( int i=0;i<dict.size();i++){
+                out.write(dict.get(i).getWord());
+                out.write("\n");
+                out.write(dict.get(i).getClue());
+                out.write("\n");
             }
             out.close();
         } catch (FileNotFoundException ex) {

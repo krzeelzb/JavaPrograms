@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class InteliCwDb extends CwDB {
-   
+
 
     public InteliCwDb(String filename) {
         super(filename);
@@ -20,7 +20,7 @@ public class InteliCwDb extends CwDB {
         else
             found.push(tocheck);
         return found;
-        }
+    }
 
 
     public Entry getRandom(String pattern) {
@@ -37,7 +37,7 @@ public class InteliCwDb extends CwDB {
                         //System.out.print(Character.toString(temp.charAt(j)));
                         _pattern+=Character.toString(temp.charAt(j));
                     }
-                      }
+                }
                 if (_pattern.equals(pattern)) {
                     System.out.println(_tempword);
                     System.out.println(temp);

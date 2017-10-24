@@ -16,8 +16,8 @@ public class MainCrossword {
 
 
 
-       checkInteli.getRandom("Matematyka");
-       checkInteli.findAll("Matematyka");
+        checkInteli.getRandom("Matematyka");
+        checkInteli.findAll("Matematyka");
         checkInteli.getRandom(7);
         checkInteli.add("Ela","Studentka");
         checkInteli.saveDB("/home/ela/Pulpit/cwdb1.txt");
