@@ -121,8 +121,10 @@ public class Controller {
                                     listView.getSelectionModel().selectedItemProperty().addListener(
                                             (ObservableValue<? extends String> ov, String old_val,
                                              String new_val) -> {
-                                                System.out.println(new_val);
+                                              //  System.out.println(new_val);
+                                              // System.out.println("1"+f.getName());
                                                 try {
+                                                    if(new_val.equals(f.getName()))
                                                     imgView(stage,f.getPath());
                                                 } catch (FileNotFoundException e1) {
                                                     e1.printStackTrace();
@@ -164,6 +166,7 @@ public class Controller {
 
     }
     public void imgView(Stage primaryStage,String path) throws IOException, IndicoException {
+        System.out.println(path);
 
         double tmpValue = 0;
         String tmpName = "";
@@ -179,13 +182,13 @@ public class Controller {
             Indico indico = new Indico("63518acb5d3b0edd4db938ba2193f047");
             IndicoResult single = indico.imageRecognition.predict(f);
             Map<String, Double> result = single.getImageRecognition();
-            LinkedList<PieChart> list=new LinkedList<>();
+           // System.out.println(path);
 
 
             Set<Map.Entry<String, Double>> entrySet = result.entrySet();
             for (Map.Entry<String, Double> entry : entrySet) {
-//                System.out.println(entry.getKey());
-//                System.out.println(entry.getValue());
+               // System.out.println(entry.getKey());
+                //System.out.println(entry.getValue());
                 if (entry.getValue() > tmpValue) {
                     if(entry.getValue()>0.005) {
                         answer.add(new PieChart.Data(entry.getKey(), entry.getValue()));
