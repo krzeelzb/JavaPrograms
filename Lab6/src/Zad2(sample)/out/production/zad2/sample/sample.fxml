@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TextField id="wsp" fx:id="wsp" onAction="#draw2" promptText="Współczynniki" />
+      <TextField id="od" onAction="#draw2" promptText="Zakres od" GridPane.rowIndex="1" />
+      <TextField id="end" onAction="#draw2" promptText="Zakres do " GridPane.rowIndex="2" />
+      <TextField id="prob" onAction="#draw2" promptText="Próbkowanie" GridPane.rowIndex="3" />
+      <Button id="butt" fx:id="butt_" mnemonicParsing="false" onAction="#wykres" text="Rysuj" GridPane.rowIndex="6" />
+   </children>
+</GridPane>
